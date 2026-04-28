@@ -12,4 +12,4 @@ def reshape_array(data, operation):
     if operation == "transpose":
         return arr.T
 
-    return arr.reshape((-1, *arr.shape))
+    return arr[np.newaxis, ...]
