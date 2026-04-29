@@ -12,4 +12,4 @@ def reshape_array(data, operation):
     if operation == "transpose":
         return arr.T
 
-    return np.expand_dims(arr, axis=0)
+    return arr[np.newaxis, ...]
