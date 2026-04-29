@@ -4,7 +4,7 @@ def reshape_array(data, operation):
     """
     Returns: ndarray of float64 with shape determined by the operation
     """
-    arr = np.array(data, dtype=np.float64)
+    arr = np.asarray(data, dtype=np.float64)
     
     if operation == "flatten":
         return arr.flatten()
@@ -12,4 +12,4 @@ def reshape_array(data, operation):
     if operation == "transpose":
         return arr.T
 
-    return arr[np.newaxis, ...]
+    return np.expand_dims(arr, axis=0)
