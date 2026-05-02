@@ -4,4 +4,4 @@ def outer_sum(a, b):
     """Returns: np.ndarray of shape (m, n), outer sum where out[i,j] = a[i] + b[j]"""
     a = np.asarray(a, dtype=np.float64)
     b = np.asarray(b, dtype=np.float64)
-    return a[..., np.newaxis] + b 
+    return np.add.outer(a, b)
